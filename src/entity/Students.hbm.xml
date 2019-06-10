@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2018-9-3 18:00:24 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="entity.Students" table="STUDENTS">
+        <id name="sid" type="java.lang.String">
+        	<!-- 不写column的话，列名就是id或property中的name -->
+        	<column name="sid" />
+            <generator class="assigned"/>
+        </id>
+        <property name="sname" type="java.lang.String"></property>
+        <property name="gender" type="java.lang.String"></property>
+        <!-- 日期类型可以是java定义的java.util.date，也可以是hibernate定义的date类型，date类型的日期为年月日,没有时分秒 -->
+        <property name="birthday" type="date"></property>
+        <property name="address" type="java.lang.String"></property>
+    </class>
+</hibernate-mapping>

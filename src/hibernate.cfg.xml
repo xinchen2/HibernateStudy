@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+    	<property name="connection.username">root</property> 
+    	<property name="connection.password">123366</property>
+    	<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+    	<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/imooc2?useUnicode=true&amp;characterEncoding=utf-8&amp;serverTimezone=GMT%2B8&amp;useSSL=false&amp;allowPublicKeyRetrieval=true</property> 
+    	<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+    	
+    	<!-- hibernate工程成功运行后，可以在console看见格式化的sql语句 -->
+    	<property name="show_sql">true</property>
+    	<!-- 删除原有的表结构，生成新的表后加入数据 -->
+    	<!-- update值，保留原有的表，加入新的数据 -->
+    	<property name="hbm2ddl.auto">update</property>
+    	<property name="format_sql">true</property>
+    	<property name="hibernate.current_session_context_class">thread</property>
+    	
+    	<mapping resource="entity/Students.hbm.xml" />
+    	<mapping resource="entity/Users.hbm.xml" />
+    </session-factory>
+</hibernate-configuration>
